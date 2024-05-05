@@ -1,0 +1,56 @@
+{
+  "type": "wordpress-plugin",
+  "license": "GPLv2",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    }
+  ],
+  "extra": {
+    "installer-types": ["project"],
+    "installer-paths": {
+      "bedrock/": [
+          "roots/bedrock"
+      ],
+      "bedrock/web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "bedrock/web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "bedrock/web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "bedrock/web/wp"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6",
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "wp-coding-standards/wpcs": "^3.1",
+    "phpunit/phpunit": "^9.6"
+  },
+  "require": {
+    "roots/bedrock": "^1.24",
+    "oomphinc/composer-installers-extender": "^2.0",
+    "yoast/phpunit-polyfills": "^2.0",
+    "wp-phpunit/wp-phpunit": "^6.2"
+  },
+  "scripts": {
+    "lint": "phpcs",
+    "test": "phpunit"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/src"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true,
+      "roots/wordpress-core-installer": true,
+      "oomphinc/composer-installers-extender": true
+    }
+  }
+}
