@@ -1,0 +1,21 @@
+services:
+  db:
+    container_name: feature_toggles_wordpress_test_db
+    image: ${FEATURE_TOGGLES_TEST_MYSQL_IMAGE:-mariadb:latest}
+    ports:
+      - ${FEATURE_TOGGLES_TEST_DB_PORT}:3306
+    volumes:
+      - type: volume
+        source: test-db-store
+        target: "/var/lib/mysql"
+    environment:
+      MARIADB_ROOT_PASSWORD: ${FEATURE_TOGGLES_TEST_DB_ROOT_PASSWORD}
+      MYSQL_USER: ${FEATURE_TOGGLES_TEST_DB_USER}
+      MYSQL_PASSWORD: ${FEATURE_TOGGLES_TEST_DB_PASSWORD}
+      MYSQL_DATABASE: ${FEATURE_TOGGLES_TEST_DB_NAME}
+      TZ: ${FEATURE_TOGGLES_TEST_DB_TZ:-Etc/UTC}
+    env_file:
+      - ./docker_configs/.env.compose.test
+
+volumes:
+  test-db-store:
