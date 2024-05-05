@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use \FeatureToggles\FeatureToggles\FeatureDecisions;
-use \FeatureToggles\FeatureToggles\ToggleRouter;
+use FeatureToggles\FeatureToggles\FeatureDecisions;
+use FeatureToggles\FeatureToggles\ToggleRouter;
 
 /**
  * FeatureDecisions のテストクラス

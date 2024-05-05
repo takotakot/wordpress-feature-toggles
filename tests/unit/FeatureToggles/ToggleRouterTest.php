@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use \FeatureToggles\FeatureToggles\ToggleRouter;
+use FeatureToggles\FeatureToggles\ToggleRouter;
 
 class ToggleRouterTest extends TestCase {
 	/**
