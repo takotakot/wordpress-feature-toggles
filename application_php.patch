@@ -1,0 +1,16 @@
+diff --git a/bedrock/config/application.php b/bedrock/config/application.php
+index b3bc75b..ea005e4 100644
+--- a/bedrock/config/application.php
++++ b/bedrock/config/application.php
+@@ -113,7 +113,9 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
+  * Custom Settings
+  */
+ Config::define('AUTOMATIC_UPDATER_DISABLED', true);
+-Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
++if (WP_ENV !== 'testing') {
++    Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
++}
+ 
+ // Disable the plugin and theme file editor in the admin
+ Config::define('DISALLOW_FILE_EDIT', true);
+ // Disable plugin and theme updates and installation from the admin
