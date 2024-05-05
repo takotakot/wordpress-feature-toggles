@@ -1,0 +1,65 @@
+name: phpcs
+on:
+  pull_request:
+    paths:
+      - "**.php"
+      - "phpcs.xml"
+      - ".github/workflows/phpcs.yml"
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      # - name: WPCS check
+      #   uses: 10up/wpcs-action@stable
+      - name: Checkout wpcs
+        uses: actions/checkout@master
+        with:
+          repository: WordPress/WordPress-Coding-Standards
+          path: wpcs
+          fetch-depth: 0
+      - name: Checkout phpcsutils
+        uses: actions/checkout@master
+        with:
+          repository: phpcsstandards/phpcsutils
+          path: phpcsutils
+          fetch-depth: 0
+      - name: Checkout phpcsextra
+        uses: actions/checkout@master
+        with:
+          repository: PHPCSStandards/PHPCSExtra
+          path: phpcsextra
+          fetch-depth: 0
+      - name: Checkout PHPCompatibility
+        uses: actions/checkout@master
+        with:
+          repository: PHPCompatibility/PHPCompatibility
+          path: phpcompatibility
+          fetch-depth: 0
+      - name: Checkout PHPCompatibilityParagonie
+        uses: actions/checkout@master
+        with:
+          repository: PHPCompatibility/PHPCompatibilityParagonie
+          path: phpcompatibilityparagonie
+          fetch-depth: 0
+      - name: Checkout PHPCompatibilityWP
+        uses: actions/checkout@master
+        with:
+          repository: PHPCompatibility/PHPCompatibilityWP
+          path: phpcompatibilitywp
+          fetch-depth: 0
+      - name: Install PHP_CodeSniffer
+        run: |
+          curl -OL https://phars.phpcodesniffer.com/phpcs.phar
+          php phpcs.phar --version
+      - name: Register wpcs
+        run: |
+          php phpcs.phar --config-set installed_paths wpcs,phpcsutils/PHPCSUtils,phpcsextra,phpcompatibility,phpcompatibilityparagonie,phpcompatibilitywp
+      - uses: tinovyatkin/action-php-codesniffer@master
+        with:
+          files: "**.php" # you may customize glob as needed
+          phpcs_path: php phpcs.phar
+          standard: .phpcs.xml.dist
+          scope: 'files'
