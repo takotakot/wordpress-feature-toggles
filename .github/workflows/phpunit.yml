@@ -1,0 +1,73 @@
+name: phpunit
+on:
+  pull_request:
+    paths:
+      - "**.php"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mariadb:latest
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: wp_phpunit_tests
+          MYSQL_USER: test
+          MYSQL_PASSWORD: password
+        ports:
+          - 3307:3306
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        extensions: mbstring, intl, mysqli
+        ini-values: post_max_size=256M, upload_max_filesize=256M, memory_limit=512M
+        coverage: none
+
+    - name: Get Composer Cache Directory
+      id: composer-cache
+      uses: actions/cache@v4
+      with:
+        path: ${{ github.workspace }}/vendor
+        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+        restore-keys: ${{ runner.os }}-composer-
+
+    # TODO: Clean only when `bedrock/config/application.php` does not exist.
+    - name: Clean bedrock dir
+      run: rm -rf bedrock
+
+    - name: Install Dependencies
+      # Install always because bedrock is updated
+      # if: steps.composer-cache.outputs.cache-hit != 'true'
+      run: |
+        composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+    - name: Copy environment files
+      run: |
+        cp -n ./docker_configs/.env.example ./bedrock/.env
+        cp -n ./docker_configs/.env.actions.test ./bedrock/.env.local
+
+    - name: Recover deleted files
+      run: git checkout -- bedrock/config/environments/testing.php
+
+    - name: Apply patch
+      run: git --git-dir= apply application_php.patch
+
+    - name: Dump autoload
+      run: composer dump-autoload
+
+    - name: Run PHPUnit tests
+      run: composer test
