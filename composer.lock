@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f18d1380037eb82e74e88f115e0c108",
+    "content-hash": "94286970447f90aa2da46ef9f2bdefdc",
     "packages": [
         {
             "name": "composer/installers",
@@ -1131,22 +1131,22 @@
         },
         {
             "name": "roots/bedrock",
-            "version": "1.26.0",
+            "version": "1.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/bedrock.git",
-                "reference": "dbe1dab750d4dc0056eed13ec6bce38ad2f29e42"
+                "reference": "511fe0a4727ef7df4ca060bcb9af81ca429c7c14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/bedrock/zipball/dbe1dab750d4dc0056eed13ec6bce38ad2f29e42",
-                "reference": "dbe1dab750d4dc0056eed13ec6bce38ad2f29e42",
+                "url": "https://api.github.com/repos/roots/bedrock/zipball/511fe0a4727ef7df4ca060bcb9af81ca429c7c14",
+                "reference": "511fe0a4727ef7df4ca060bcb9af81ca429c7c14",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^2.2",
                 "oscarotero/env": "^2.1",
-                "php": ">=8.1",
+                "php": ">=8.0",
                 "roots/bedrock-autoloader": "^1.0",
                 "roots/bedrock-disallow-indexing": "^2.0",
                 "roots/wordpress": "6.7.1",
@@ -1156,8 +1156,8 @@
                 "wpackagist-theme/twentytwentyfive": "^1.0"
             },
             "require-dev": {
-                "laravel/pint": "^1.18",
-                "roave/security-advisories": "dev-latest"
+                "roave/security-advisories": "dev-latest",
+                "squizlabs/php_codesniffer": "^3.7.1"
             },
             "type": "project",
             "extra": {
@@ -1203,7 +1203,7 @@
             "support": {
                 "forum": "https://discourse.roots.io/category/bedrock",
                 "issues": "https://github.com/roots/bedrock/issues",
-                "source": "https://github.com/roots/bedrock/tree/1.26.0"
+                "source": "https://github.com/roots/bedrock/tree/1.25.1"
             },
             "funding": [
                 {
@@ -1211,7 +1211,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-14T16:12:32+00:00"
+            "time": "2024-11-21T23:08:49+00:00"
         },
         {
             "name": "roots/bedrock-autoloader",
@@ -3725,5 +3725,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
