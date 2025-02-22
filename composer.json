@@ -31,7 +31,7 @@
     "phpunit/phpunit": "^9.6"
   },
   "require": {
-    "roots/bedrock": "~1.25.0",
+    "roots/bedrock": "~1.26.1",
     "oomphinc/composer-installers-extender": "^2.0",
     "yoast/phpunit-polyfills": "^4.0",
     "wp-phpunit/wp-phpunit": "^6.2"
