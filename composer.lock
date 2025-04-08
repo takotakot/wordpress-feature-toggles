@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a88c0d3317d064c92c873f28201acbed",
+    "content-hash": "76b094978d9b682a11ad8298e67cfba9",
     "packages": [
         {
             "name": "composer/installers",
@@ -1131,33 +1131,33 @@
         },
         {
             "name": "roots/bedrock",
-            "version": "1.25.1",
+            "version": "1.26.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/bedrock.git",
-                "reference": "511fe0a4727ef7df4ca060bcb9af81ca429c7c14"
+                "reference": "7db07f8f5a362628c8d721464abc64ad0dcae2f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/bedrock/zipball/511fe0a4727ef7df4ca060bcb9af81ca429c7c14",
-                "reference": "511fe0a4727ef7df4ca060bcb9af81ca429c7c14",
+                "url": "https://api.github.com/repos/roots/bedrock/zipball/7db07f8f5a362628c8d721464abc64ad0dcae2f9",
+                "reference": "7db07f8f5a362628c8d721464abc64ad0dcae2f9",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^2.2",
                 "oscarotero/env": "^2.1",
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "roots/bedrock-autoloader": "^1.0",
                 "roots/bedrock-disallow-indexing": "^2.0",
-                "roots/wordpress": "6.7.1",
+                "roots/wordpress": "6.7.2",
                 "roots/wp-config": "1.0.0",
                 "roots/wp-password-bcrypt": "1.2.0",
                 "vlucas/phpdotenv": "^5.5",
                 "wpackagist-theme/twentytwentyfive": "^1.0"
             },
             "require-dev": {
-                "roave/security-advisories": "dev-latest",
-                "squizlabs/php_codesniffer": "^3.7.1"
+                "laravel/pint": "^1.18",
+                "roave/security-advisories": "dev-latest"
             },
             "type": "project",
             "extra": {
@@ -1203,7 +1203,7 @@
             "support": {
                 "forum": "https://discourse.roots.io/category/bedrock",
                 "issues": "https://github.com/roots/bedrock/issues",
-                "source": "https://github.com/roots/bedrock/tree/1.25.1"
+                "source": "https://github.com/roots/bedrock/tree/1.26.1"
             },
             "funding": [
                 {
@@ -1211,7 +1211,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-21T23:08:49+00:00"
+            "time": "2025-02-14T17:30:26+00:00"
         },
         {
             "name": "roots/bedrock-autoloader",
@@ -1349,16 +1349,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.7.1",
+            "version": "6.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
-                "reference": "9451af491af7124c12186398c56ab87a6e145123"
+                "reference": "c53e4173d239dcaf8889f9f84c0b827a0cf643e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/wordpress/zipball/9451af491af7124c12186398c56ab87a6e145123",
-                "reference": "9451af491af7124c12186398c56ab87a6e145123",
+                "url": "https://api.github.com/repos/roots/wordpress/zipball/c53e4173d239dcaf8889f9f84c0b827a0cf643e9",
+                "reference": "c53e4173d239dcaf8889f9f84c0b827a0cf643e9",
                 "shasum": ""
             },
             "require": {
@@ -1380,7 +1380,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.7.1"
+                "source": "https://github.com/roots/wordpress/tree/6.7.2"
             },
             "funding": [
                 {
@@ -1388,7 +1388,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-13T09:56:09+00:00"
+            "time": "2024-12-15T16:32:37+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -1463,22 +1463,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.7.1",
+            "version": "6.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.7.1"
+                "reference": "6.7.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.7.1-no-content.zip",
-                "shasum": "321a5b819369e772ce606fbc12b1e264fb73da5b"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.7.2-no-content.zip",
+                "shasum": "c33ca276601dee0ddf1e80d3e66403929a696e63"
             },
             "require": {
                 "php": ">= 7.2.24"
             },
             "provide": {
-                "wordpress/core-implementation": "6.7.1"
+                "wordpress/core-implementation": "6.7.2"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -1529,7 +1529,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-11-21T14:15:19+00:00"
+            "time": "2025-02-11T16:29:31+00:00"
         },
         {
             "name": "roots/wp-config",
