@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a88c0d3317d064c92c873f28201acbed",
+    "content-hash": "deaa9e810139cba354486cd21b818bb4",
     "packages": [
         {
             "name": "composer/installers",
@@ -1131,33 +1131,32 @@
         },
         {
             "name": "roots/bedrock",
-            "version": "1.25.1",
+            "version": "1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/bedrock.git",
-                "reference": "511fe0a4727ef7df4ca060bcb9af81ca429c7c14"
+                "reference": "ace4356960712ef7872c519e835436e9f250bfd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/bedrock/zipball/511fe0a4727ef7df4ca060bcb9af81ca429c7c14",
-                "reference": "511fe0a4727ef7df4ca060bcb9af81ca429c7c14",
+                "url": "https://api.github.com/repos/roots/bedrock/zipball/ace4356960712ef7872c519e835436e9f250bfd7",
+                "reference": "ace4356960712ef7872c519e835436e9f250bfd7",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^2.2",
                 "oscarotero/env": "^2.1",
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "roots/bedrock-autoloader": "^1.0",
                 "roots/bedrock-disallow-indexing": "^2.0",
-                "roots/wordpress": "6.7.1",
+                "roots/wordpress": "6.8",
                 "roots/wp-config": "1.0.0",
-                "roots/wp-password-bcrypt": "1.2.0",
                 "vlucas/phpdotenv": "^5.5",
                 "wpackagist-theme/twentytwentyfive": "^1.0"
             },
             "require-dev": {
-                "roave/security-advisories": "dev-latest",
-                "squizlabs/php_codesniffer": "^3.7.1"
+                "laravel/pint": "^1.18",
+                "roave/security-advisories": "dev-latest"
             },
             "type": "project",
             "extra": {
@@ -1203,7 +1202,7 @@
             "support": {
                 "forum": "https://discourse.roots.io/category/bedrock",
                 "issues": "https://github.com/roots/bedrock/issues",
-                "source": "https://github.com/roots/bedrock/tree/1.25.1"
+                "source": "https://github.com/roots/bedrock/tree/1.28.0"
             },
             "funding": [
                 {
@@ -1211,7 +1210,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-21T23:08:49+00:00"
+            "time": "2025-04-16T14:41:45+00:00"
         },
         {
             "name": "roots/bedrock-autoloader",
@@ -1349,16 +1348,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.7.1",
+            "version": "6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
-                "reference": "9451af491af7124c12186398c56ab87a6e145123"
+                "reference": "c53e4173d239dcaf8889f9f84c0b827a0cf643e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/wordpress/zipball/9451af491af7124c12186398c56ab87a6e145123",
-                "reference": "9451af491af7124c12186398c56ab87a6e145123",
+                "url": "https://api.github.com/repos/roots/wordpress/zipball/c53e4173d239dcaf8889f9f84c0b827a0cf643e9",
+                "reference": "c53e4173d239dcaf8889f9f84c0b827a0cf643e9",
                 "shasum": ""
             },
             "require": {
@@ -1380,7 +1379,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.7.1"
+                "source": "https://github.com/roots/wordpress/tree/6.8"
             },
             "funding": [
                 {
@@ -1388,7 +1387,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-13T09:56:09+00:00"
+            "time": "2024-12-15T16:32:37+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -1463,22 +1462,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.7.1",
+            "version": "6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.7.1"
+                "reference": "6.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.7.1-no-content.zip",
-                "shasum": "321a5b819369e772ce606fbc12b1e264fb73da5b"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.8-no-content.zip",
+                "reference": "6.8",
+                "shasum": "f6bb25f590bb6dc45d21e26de97b589c5f0703bd"
             },
             "require": {
                 "php": ">= 7.2.24"
             },
             "provide": {
-                "wordpress/core-implementation": "6.7.1"
+                "wordpress/core-implementation": "6.8"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -1529,7 +1529,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-11-21T14:15:19+00:00"
+            "time": "2025-04-15T15:45:35+00:00"
         },
         {
             "name": "roots/wp-config",
@@ -1576,81 +1576,6 @@
                 "source": "https://github.com/roots/wp-config/tree/master"
             },
             "time": "2018-08-10T14:18:38+00:00"
-        },
-        {
-            "name": "roots/wp-password-bcrypt",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/roots/wp-password-bcrypt.git",
-                "reference": "bd26ab98aa646d88ce98c76e365d16259c5227a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/roots/wp-password-bcrypt/zipball/bd26ab98aa646d88ce98c76e365d16259c5227a2",
-                "reference": "bd26ab98aa646d88ce98c76e365d16259c5227a2",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "brain/monkey": "^2.6",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-                "mockery/mockery": "^1.4",
-                "phpcompatibility/php-compatibility": "^9.3",
-                "phpunit/phpunit": "<= 9.3",
-                "squizlabs/php_codesniffer": "^3.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "wp-password-bcrypt.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Scott Walkinshaw",
-                    "email": "scott.walkinshaw@gmail.com",
-                    "homepage": "https://github.com/swalkinshaw"
-                },
-                {
-                    "name": "QWp6t",
-                    "homepage": "https://github.com/qwp6t"
-                },
-                {
-                    "name": "Brandon Nifong",
-                    "homepage": "https://github.com/log1x"
-                },
-                {
-                    "name": "Jan Pingel",
-                    "email": "jpingel@bitpiston.com",
-                    "homepage": "http://janpingel.com"
-                }
-            ],
-            "description": "WordPress plugin which replaces wp_hash_password and wp_check_password's phpass hasher with PHP 5.5's password_hash and password_verify using bcrypt.",
-            "homepage": "https://roots.io/plugins/wp-password-bcrypt",
-            "keywords": [
-                "bcrypt",
-                "passwords",
-                "wordpress"
-            ],
-            "support": {
-                "forum": "https://discourse.roots.io/",
-                "issues": "https://github.com/roots/wp-password-bcrypt/issues",
-                "source": "https://github.com/roots/wp-password-bcrypt/tree/1.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/roots",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-09-10T23:11:22+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -3038,15 +2963,15 @@
         },
         {
             "name": "wpackagist-theme/twentytwentyfive",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/twentytwentyfive/",
-                "reference": "1.1"
+                "reference": "1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentytwentyfive.1.1.zip"
+                "url": "https://downloads.wordpress.org/theme/twentytwentyfive.1.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
