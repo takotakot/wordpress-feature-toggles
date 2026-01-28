@@ -50,6 +50,10 @@ jobs:
           repository: PHPCompatibility/PHPCompatibilityWP
           path: phpcompatibilitywp
           fetch-depth: 0
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
       - name: Install PHP_CodeSniffer
         run: |
           curl -OL https://phars.phpcodesniffer.com/phpcs.phar
